@@ -28,38 +28,38 @@ Execute the necessary commands/batch file for the desired output.
 Create a directory named "MyLab" on the desktop.
 
 
-## COMMAND AND OUTPUT
+* __COMMAND AND OUTPUT__
+![OUTPUT](./img/image.png)
 
-Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
-
-
-## COMMAND AND OUTPUT
-
-List the contents of the "MyLab" directory.
+#### Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
 
 
-## COMMAND AND OUTPUT
+* __COMMAND AND OUTPUT__
+![OUTPUT](./img/image-1.png)
 
-Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
-
-## COMMAND AND OUTPUT
-
-Move the "MyLab" directory to the "Documents" folder.
+#### List the contents of the "MyLab" directory.
 
 
-## COMMAND AND OUTPUT
+* __COMMAND AND OUTPUT__
+![OUTPUT](./img/image-2.png)
 
+#### Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
+
+* __COMMAND AND OUTPUT__
+![OUTPUT](./img/image-3.png)
+
+#### Move the "MyLab" directory to the "Documents" folder.
+
+
+* __COMMAND AND OUTPUT__
+![OUTPUT](./img/image-4.png)
 
 ## Exercise 2: Advanced Batch Scripting
-Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
+#### Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
 
 
-
-
-
-
-
-## OUTPUT
+* __OUTPUT__
+![OUTPUT](./img/image-5.png)
 
 
 
