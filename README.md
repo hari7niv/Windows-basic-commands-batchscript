@@ -22,77 +22,140 @@ Execute the necessary commands/batch file for the desired output.
 
 # WINDOWS COMMANDS:
 ## Exercise 1: Basic Directory and File Operations
-Create a directory named "my-folder"
+
+## 1. Create a directory named "my-folder"
 
 ## COMMAND AND OUTPUT
+```
+mkdir my-folder
+```
+![Screenshot 2025-05-19 080712](https://github.com/user-attachments/assets/edd645dc-9868-4d16-9834-0eff7fb6e85d)
 
-Remove the directory "my-folder"
 
+## 2. Remove the directory "my-folder"
 ## COMMAND AND OUTPUT
+```rmdir my-folder```
+
+![Screenshot 2025-05-19 080735](https://github.com/user-attachments/assets/9d228676-8da1-4934-9575-dcbd215529c4)
 
 
-Create the file Rose.txt
-
+## 3. Create the file Rose.txt
 ## COMMAND AND OUTPUT
+```COPY CON Rose.txt```
+
+![Screenshot 2025-05-19 093309](https://github.com/user-attachments/assets/c1ef4bc7-8b32-4db6-9449-2d659cf1de67)
 
 
-Create the file hello.txt using echo and redirection
 
+## 4. Create the file hello.txt using echo and redirection
 ## COMMAND AND OUTPUT
+```
+echo “hello world” > hello.txt
+type hello.txt
+```
 
-Copy the file hello.txt into the file hello1.txt
+![Screenshot 2025-05-19 093408](https://github.com/user-attachments/assets/e22968a0-8ea5-40ce-a3fa-089c277c4444)
 
+
+## 5. Copy the file hello.txt into the file hello1.txt
 ## COMMAND AND OUTPUT
+```
+copy hello.txt hello1.txt
+```
 
-Remove the file hello1.txt
+![Screenshot 2025-05-19 093450](https://github.com/user-attachments/assets/3f8fa4f7-cf0b-443b-b475-f0b23e7d504d)
 
+
+## 6. Remove the file hello1.txt
+## 7. List out the file hello1.txt in the current directory
 ## COMMAND AND OUTPUT
+```
+del hello1.txt
+dir hello1.txt
+```
 
-List out the file hello1.txt in the current directory
+![Screenshot 2025-05-19 093516](https://github.com/user-attachments/assets/80676924-ea0e-43a3-a66b-de4899fb4a96)
 
+## 8. List out all the associated file extensions 
 ## COMMAND AND OUTPUT
+```assoc | more```
 
-List out all the associated file extensions 
+![Screenshot 2025-05-19 093548](https://github.com/user-attachments/assets/61a6ab44-7c83-4294-8f63-9c6135e19255)
 
+
+
+## 9. Compare the file hello.txt and rose.txt
 ## COMMAND AND OUTPUT
+```fc hello.txt Rose.txt```
 
+![Screenshot 2025-05-19 093722](https://github.com/user-attachments/assets/84aeafa9-ef05-4444-a043-d83dccafdb3b)
 
-Compare the file hello.txt and rose.txt
-
-## COMMAND AND OUTPUT
 
 ## Exercise 2: Advanced Batch Scripting
-Create a batch file named on the desktop. The batch file need to have a variable assigned with a desired name for ex. name="John" and display as "Hello, John".
+## 1. Create a batch file named on the desktop. The batch file need to have a variable assigned with a desired name for ex. name="John" and display as "Hello, John".
+```
+@echo off
+set name=John
+echo Hello, %name%!
+pause
+```
+
+## OUTPUT
+![Screenshot 2025-05-19 093948](https://github.com/user-attachments/assets/06b50bc3-dccc-48b9-aada-a2b221e40b3e)
 
 
+
+
+## 2. Create a batch file  on the desktop that checks whether a user-input number is odd or not. The script should:
+### 1. Prompt the user to enter a number.
+### 2. Calculate the remainder when the number is divided by 2.
+### 3. Display whether the number is odd or not.
+### 4. Ask the user if they want to check another number.
+### 5. Repeat the process if the user enters Y, and exit with a thank-you message if the user enters N.
+### 6. Handle invalid inputs for the continuation prompt (Y/N) gracefully.
+
+```
+@echo off
+:main
+set /p number=Enter a number: 
+rem Calculate remainder when divided by 2
+set /a remainder=%number% %% 2
+if %remainder%==1 (
+    echo %number% is an odd number.
+) else (
+    echo %number% is not an odd number.
+)
+:choice
+set /p continue=Do you want to check another number? (Y/N): 
+if /i "%continue%"=="Y" goto main
+if /i "%continue%"=="N" goto end
+echo Invalid choice, please enter Y or N.
+goto choice
+:end
+echo Thank you for using the odd number checker!
+pause
+
+```
+
+## OUTPUT
+![Screenshot 2025-05-19 094225](https://github.com/user-attachments/assets/35face2b-67de-4d56-9872-dfdf2806bca2)
+
+
+
+
+## 3. Write a batch file that uses a FOR loop to iterate over a sequence of numbers (1 to 5) and displays each number with the label Number:. The output should pause at the end.
+```
+@echo off
+for %%i in (1 2 3 4 5) do (
+    echo Number: %%i
+)
+pause
+```
 
 
 
 ## OUTPUT
-
-
-
-Create a batch file  on the desktop that checks whether a user-input number is odd or not. The script should:
-Prompt the user to enter a number.
-Calculate the remainder when the number is divided by 2.
-Display whether the number is odd or not.
-Ask the user if they want to check another number.
-Repeat the process if the user enters Y, and exit with a thank-you message if the user enters N.
-Handle invalid inputs for the continuation prompt (Y/N) gracefully.
-
-
-
-## OUTPUT
-
-
-
-
-Write a batch file that uses a FOR loop to iterate over a sequence of numbers (1 to 5) and displays each number with the label Number:. The output should pause at the end.
-
-
-
-
-## OUTPUT
+![Screenshot 2025-05-19 094256](https://github.com/user-attachments/assets/b58ba818-262a-4c3b-b9a7-c4e4316b4578)
 
 
 
